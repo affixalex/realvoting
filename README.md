@@ -12,4 +12,8 @@ and a block chain ledger (based on HyperLedger) to store and tally the results.
     docker pull hyperledger/fabric-orderer:${HLF_VERSION}
     docker pull hyperledger/fabric-ca:${HLF_VERSION}
     docker pull hyperledger/fabric-ccenv:${HLF_VERSION}
-    docker-compose -f test/fixtures/docker-compose-2orgs-4peers-tls.yaml up
+    docker-compose up
+
+Now we have a simple election quorum going, with results persisted in a fully
+distributed blockchain. But, we aren't doing any voting yet so there aren't
+any results. That's fair, I suppose. We're gonna have to write some code!
